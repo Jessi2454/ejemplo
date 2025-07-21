@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+
+body {
+  background: linear-gradient(135deg, #1c1c1c, #2c2c2c);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  margin: 0;
+}
+
+/* ==== ENCABEZADO (TOP BAR) ==== */
+.top-bar {
+  background-color: #FFD43B;
+  padding: 8px 18px;  
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo-titulo img {
+  height: 200px;
+  width: auto;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
+ 
+  border-radius: 8px;
+  padding: 4px;
+}
+
+
+
+.titulo-logo {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2rem;
+  color: #fffffe;
+  letter-spacing: 1.5px;
+  text-shadow: 6px 6px 6px #000;
+}
+
+
+
+/* Responsive solo en móviles */
+@media (max-width: 576px) {
+  .logo-titulo {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .top-title {
+    align-items: center;
+    text-align: center;
+  }
+
+  .top-title .linea1,
+  .top-title .linea2 {
+    font-size: 1.3rem;
+  }
+
+  .logo-titulo img {
+    height: 65px;
+  }
+}
+
+/* ==== CATÁLOGO HEADER ==== */
+.catalog-header {
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+
+.catalog-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #FFD700;
+  text-shadow: 2px 2px 10px #000;
+}
+
+.catalog-header p {
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+/* ==== PRODUCTOS ==== */
+.catalog-container {
+  padding: 0 40px 60px;
+}
+
+@media (max-width: 768px) {
+  .catalog-container {
+    padding: 0 15px;
+  }
+}
+
+.producto-card {
+  background: radial-gradient(circle at top left, #333 0%, #1c1c1c 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.producto-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+}
+
+.producto-img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  background-color: #eaeaea;
+  display: block;
+}
+
+.producto-body {
+  padding: 20px;
+}
+
+.producto-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #FFD700;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.btn-ver {
+  background: linear-gradient(45deg, #FFD700, #FFC300);
+  color: #000;
+  border: none;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.btn-vermas:hover {
+  background-color: #bc955b;
+  color: #000;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+
+/* ==== MODAL ==== */
+.modal-content {
+  background-color: #1f1f1f;
+  border-radius: 15px;
+  border: 1px solid #FFD700;
+}
+
+.modal-title {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.modal-body ul {
+  padding-left: 20px;
+}
+
+.modal-body li {
+  margin-bottom: 6px;
+}
+
+/* ==== CARRUSEL ==== */
+.carousel {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.carousel img {
+  height: 450px;
+  object-fit: cover;
+}
+
+.carousel-caption h5 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 18px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 100% 100%;
+  filter: brightness(0) invert(1);
+  width: 40px;
+  height: 40px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ==== VIDEO FONDO ==== */
+.video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-fondo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+
+
+
+
+
+.contacto-central {
+  background-color: #0e0e0e;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  border-bottom: 3px solid #FFD700;
+}
+
+.contacto-central i {
+  color: #FFD700;
+}
+
+.contacto-central a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+.contacto-central a:hover {
+  text-decoration: underline;
+}
+
+
+.contenedor-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), #1a1a1a, rgba(0, 0, 0, 0.7));
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px; /* ← esto separa el banner de las imágenes */
+}
+
+
+.frase-izquierda,
+.frase-derecha {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px #000;
+  white-space: nowrap;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.centro-titulo {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.catalog-title {
+  font-size: 2rem;
+  color: #FFD700;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.subtitulo {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 4px;
+}
+
+
+
+
